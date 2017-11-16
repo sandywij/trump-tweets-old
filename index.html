@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+    <style>
+      rect.bordered {
+        stroke: #E6E6E6;
+        stroke-width:1px;
+      }
+
+      text.mono {
+        font-size: 9pt;
+        font-family: Consolas, courier;
+        fill: #000;
+      }
+
+      text.axis-workweek {
+        fill: #aaa;
+      }
+
+      text.axis-worktime {
+        fill: #000;
+      }
+
+      .d3-tip {
+       font-family: Verdana;
+       background: rgba(0, 0, 0, 0.8);
+       padding: 8px;
+       color: #fff;
+       z-index: 5070;
+     }
+
+     #days {
+       margin: auto;
+       width: 50%;
+       padding: 10px;
+     }
+
+    </style>
+    <script src="http://d3js.org/d3.v3.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+
+  </head>
+  <body>
+
+    <div id="heatmap"></div>
+    <div id="days">
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+    </div>
+
+    <script src="heatmap.js"></script>
+  </body>
+</html>
