@@ -5,6 +5,7 @@
 
 ### Tests
 [test 1](http://bl.ocks.org/sandywij/4c35caf41e54a1a888de2dca6a109b28)
+
 [test 2](http://bl.ocks.org/sandywij/a7fcdcd1c25bb0cdaa7987acd1b5708f)
 
 
@@ -15,7 +16,7 @@
 
 [Chart.js](http://www.chartjs.org/)
 
-[Bootstrap] (https://getbootstrap.com/)
+[Bootstrap](https://getbootstrap.com/)
 
 describe your data processing, 
 visualization selection
