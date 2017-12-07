@@ -18,6 +18,11 @@
 
 [Bootstrap](https://getbootstrap.com/)
 
+### Data Collection/Processing
+I've been using a [Twitter Archiver](https://ctrlq.org/) add-on to collect twitter data by @realDonaldTrump since Jan 20, 2017. The data was collected in a google sheet.
+
+Using pivot tables, I was able to get a quick snapshot of the data before I visualized the data.
+
 describe your data processing, 
 visualization selection
 analysis post-visualization
