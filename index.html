@@ -51,6 +51,249 @@
 
     </div>
 
+    <script src="heatmap.js"></script><!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>What Does Trump Do at 2 pm?</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+    <style>
+     rect.bordered {
+       stroke: #E6E6E6;
+       stroke-width:1px;
+     }
+     text.mono {
+       font-size: 9pt;
+       fill: #000;
+     }
+     text.axis-workweek {
+       fill: #aaa;
+     }
+     text.axis-worktime {
+       fill: #000;
+     }
+     .d3-tip {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 8px;
+      color: #fff;
+      z-index: 5070;
+    }
+    #days {
+      margin: auto;
+      width: 50%;
+      padding: 10px;
+    }
+   </style>
+
+   <script src="http://d3js.org/d3.v3.js"></script>
+   <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+   <script src="vendor/chartsjs/Chart.bundle.min.js"></script>
+
+
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Data Viz</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#page-top">Heatmap</a>
+
+
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#tweetcount">Retweets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#most">Most Retweeted</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#when">Averages</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="bg-primary">
+      <div class="container text-center">
+        <div id="heatmap"></div>
+        <h1>A Year in President Trump's Tweets</h1>
+        <p class="lead">As President, @realDonaldTrump has tweeted <u><b>2284</b></u> too many times in 2017. </p>
+      </div>
+    </header>
+
+    <section id="tweetcount" class="bg-light">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+              <h1>Retweets</h1>
+            <p class="lead">Because what's the point if people aren't talking?</p>
+                <br>
+                    <br>
+                        <br>
+
+          </div>
+        </div>
+
+
+  <div class="row">
+          <div class ="col-md-8">
+          <canvas id="retweets"></canvas>
+        </div>
+          <div class ="col-md-4">
+            <table class="table table-bordered table-hover table-condensed">
+                            <thead><tr><th title="Field #1">Retweets</th>
+                            <th title="Field #2">Frequency</th>
+                            </tr></thead>
+                            <tbody><tr>
+                            <td>&gt;10k</td>
+                            <td align="right">2237</td>
+                            </tr>
+                            <tr>
+                            <td>10k+</td>
+                            <td align="right">22</td>
+                            </tr>
+                            <tr>
+                            <td>20k+</td>
+                            <td align="right">11</td>
+                            </tr>
+                            <tr>
+                            <td>30k+</td>
+                            <td align="right">6</td>
+                            </tr>
+                            <tr>
+                            <td>40k+</td>
+                            <td align="right">5</td>
+                            </tr>
+                            <tr>
+                            <td>50k+</td>
+                            <td align="right">1</td>
+                            </tr>
+                            <tr>
+                            <td>60k+</td>
+                            <td align="right">1</td>
+                            </tr>
+                            <tr>
+                            <td>70k+</td>
+                            <td align="right">1</td>
+                            </tr>
+                            <tr>
+                            <td>80k+</td>
+                            <td align="right">1</td>
+                            </tr>
+                            <tr>
+                            <td>220k+</td>
+                            <td align="right">1</td>
+                            </tr>
+                            </tbody></table>
+        </div>
+</div>
+
+      </div>
+
+  <section id="most">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col">
+
+        <h1> Most retweeted tweet: 272,897 </h1>
+      </div>
+    </div>
+
+      <div class="row">
+        <div class="col">
+          <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Why would Kim Jong-un insult me by calling me &quot;old,&quot; when I would NEVER call him &quot;short and fat?&quot; Oh well, I try so hard to be his friend - and maybe someday that will happen!</p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/929511061954297857?ref_src=twsrc%5Etfw">November 12, 2017</a></blockquote>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        </div>
+
+        <div class="col">
+          <blockquote class="twitter-tweet" data-lang="en" data-conversation="none"><p lang="en" dir="ltr" >Well if it’s any consolation, that sounded like something an 8 year old might say.</p>&mdash; Ron Mayer (@korax23) <a href="https://twitter.com/korax23/status/929513534538399745?ref_src=twsrc%5Etfw">November 12, 2017</a></blockquote>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        <blockquote class="twitter-tweet" data-lang="en" data-conversation="none"><p lang="en" dir="ltr">Is this a joke? What is happening here? Did a 13 yr old girl tweet this?</p>&mdash; Kerry Souza (@bellaluna6) <a href="https://twitter.com/bellaluna6/status/929513959497101320?ref_src=twsrc%5Etfw">November 12, 2017</a></blockquote>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+    <section id="when">
+      <div class="container">
+        <h1> How often does Donald tweet? </h1>
+
+        <div class="row">
+          <div class="col">
+            <canvas id="month"></canvas>
+            <p> This year, @realDonaldTrump tweeted the most in the month of <b> October </b> </p>
+          </div>
+
+          <div class="col">
+            <canvas id="day"></canvas>
+            <p> I wonder what happened between May and June? </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white"> sandywij.github.io </p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
     <script src="heatmap.js"></script>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+
+    <!-- Charts.JS -->
+
+
+
+  </body>
+
+</html>
+
   </body>
 </html>
