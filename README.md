@@ -5,9 +5,9 @@
 
 ### Tests
 [First Test](http://bl.ocks.org/sandywij/4c35caf41e54a1a888de2dca6a109b28)
-![First Test]!(https://i.imgur.com/4JOJP4D.png)
+![First Test](https://i.imgur.com/4JOJP4D.png)
 [Second Test](http://bl.ocks.org/sandywij/a7fcdcd1c25bb0cdaa7987acd1b5708f)
-![Second Test]!(https://imgur.com/t0IGsxj.png)
+![Second Test](https://imgur.com/t0IGsxj.png)
 
 
 
